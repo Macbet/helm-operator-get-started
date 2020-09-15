@@ -454,4 +454,19 @@ If you have any questions about Helm Operator and continuous delivery:
   [flux-dev mailing list](https://lists.cncf.io/g/cncf-flux-dev).
 - [File an issue.](https://github.com/fluxcd/flux/issues/new)
 
-Your feedback is always welcome!
+# Flux-ui 
+This is project for providing web ui for fluxctl. 
+
+## Install through helm (tested in helm-v3)
+
+```shell script
+
+$ helm repo add flux-ui 'https://raw.githubusercontent.com/sureshamk/flux-ui/master/flux-ui'
+$ helm repo update
+$ helm search repo flux-ui
+NAME           	CHART VERSION	APP VERSION	DESCRIPTION
+flux-ui/flux-ui	0.1.0        	1.0        	A Helm chart for flux-ui to interact with fluxctl
+
+$ helm install flux-web-ui flux-ui/flux-ui --set config.END_POINT="http://flux:3030/"
+```
+Note: `config.END_POINT="http://flux:3030/"` this end point should be valid flux service running on your cluster 
