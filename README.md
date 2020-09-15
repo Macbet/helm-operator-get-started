@@ -79,7 +79,7 @@ Install Flux by specifying your fork URL (replace `fluxcd` with your GitHub user
 ```bash
 helm upgrade -i flux fluxcd/flux --wait \
 --namespace fluxcd \
---set git.url=git@github.com:fluxcd/helm-operator-get-started
+--set git.url=git@github.com:Macbet/helm-operator-get-started
 ```
 
 Install the `HelmRelease` Kubernetes custom resource definition:
@@ -193,7 +193,7 @@ metadata:
 spec:
   releaseName: podinfo-dev
   chart:
-    git: git@github.com:fluxcd/helm-operator-get-started
+    git: git@github.com:Macbet/helm-operator-get-started
     path: charts/podinfo
     ref: master
   values:
@@ -271,7 +271,7 @@ metadata:
 spec:
   releaseName: podinfo-rc
   chart:
-    git: git@github.com:fluxcd/helm-operator-get-started
+    git: git@github.com:Macbet/helm-operator-get-started
     path: charts/podinfo
     ref: master
   values:
@@ -326,7 +326,7 @@ metadata:
 spec:
   releaseName: podinfo-prod
   chart:
-    git: git@github.com:fluxcd/helm-operator-get-started
+    git: git@github.com:Macbet/helm-operator-get-started
     path: charts/podinfo
     ref: master
   values:
